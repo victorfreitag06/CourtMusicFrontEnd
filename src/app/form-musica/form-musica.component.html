@@ -1,0 +1,40 @@
+<body>
+  
+  <div class="product-form-container">
+    <div class="geral">
+        <div class="formulario">
+            <h2>Publicar Post</h2>
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label for="nome">Nome</label>
+                  <input type="text" id="nome" name="nome" [(ngModel)]="post.nome" placeholder="Digite o título" required />
+                </div>
+            
+                <div class="form-group">
+                  <label for="data_lancamento">Data de lançamento</label>
+                  <input type="date" id="data_lancamento" name="data_lancamento" [(ngModel)]="post.data_lancamento" placeholder="Digite a data de lancamento" required />
+                </div>
+          
+                <div class="form-group">
+                  <label for="genero">Gener</label>
+                  <input type="text" id="genero" name="genero" [(ngModel)]="post.genero" placeholder="Digite o genero" required />
+                </div>
+            
+                <div class="form-group">
+                  <label for="imageUrl">URL da Imagem</label>
+                  <input type="text" id="imageUrl" name="imageUrl" [(ngModel)]="post.imageUrl" placeholder="Insira a URL da imagem" required />
+                </div>
+            
+                <button type="submit">Publicar</button>
+              </form>
+        </div>
+        <div class="imagem">
+            <img src="/image-removebg-preview.png" alt="">
+        </div>
+
+    </div>
+    
+    
+  </div>
+
+</body>

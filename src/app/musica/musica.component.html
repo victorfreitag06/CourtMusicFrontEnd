@@ -1,0 +1,105 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<body>
+  
+
+<div class="musica-grid">
+  <div class="secao secao-icarus">
+      <div class="imagem imagem-rock">
+        <img src="/pop.jpg" alt="ICARUS">
+      </div>
+      <div class="titulo titulo-icarus">Pop</div>
+  </div>
+  <div class="secao secao-icarus">
+      <div class="imagem imagem-pop">
+        <img src="/jazz.jpg" alt="pop">
+      </div>
+      <div class="titulo titulo-icarus">Jazz</div>
+  </div>
+  <div class="secao secao-icarus">
+      <div class="imagem imagem-jazz">
+        <img src="/sertanejo.webp" alt="ICARUS">
+      </div>
+      <div class="titulo titulo-icarus">Sertanejo</div>
+  </div>
+  <div class="secao secao-icarus">
+      <div class="imagem imagem-icarus">
+        <img src="/pagode.jpg" alt="ICARUS">
+      </div>
+      <div class="titulo titulo-icarus">Pagode</div>
+  </div>
+  <div class="secao secao-icarus">
+      <div class="imagem imagem-icarus">
+          <img src="/funk.jpg" alt="ICARUS">
+      </div>
+      <div class="titulo titulo-icarus">Funk</div>
+  </div>
+  <div class="secao secao-icarus">
+      <div class="imagem imagem-hiphop">
+        <img src="/trap.jpg" alt="ICARUS">
+      </div>
+      <div class="titulo titulo-icarus">Trap</div>
+  </div>
+  <div class="secao secao-icarus">
+      <div class="imagem imagem-blues">
+        <img src="/rock.jpg" alt="ICARUS">
+      </div>
+      <div class="titulo titulo-blues">Rock</div>
+  </div>
+  <div class="secao secao-icarus">
+      <div class="imagem imagem-eletronica">
+        <img src="/ele.jpg" alt="ICARUS">
+      </div>
+      <div class="titulo titulo-eletronica">Eletronica</div>
+  </div>
+</div>
+
+<h2>Pra você</h2>
+<div class="blog-container">
+    <div class="carousel">
+      <div *ngFor="let post of musicas" class="card">
+        <img [src]="post.imageUrl" alt="{{ post.nome }}" class="image-container">
+        <div class="card-content">
+          <h3>{{ post.nome }}</h3>
+        </div>
+      </div>
+      
+    </div>
+    <button class="prev" (click)="prevSlide()">
+        <span class="material-icons">arrow_back_ios</span>
+      </button>
+      <button class="next" (click)="nextSlide()">
+        <span class="material-icons">arrow_forward_ios</span>
+      </button>
+      
+</div>
+<div class="music-player">
+  <button class="player-button">
+    <span class="material-icons">content_copy</span>
+  </button>
+  <button class="player-button">
+    <span class="material-icons">skip_previous</span>
+  </button>
+  <button class="player-button">
+    <span class="material-icons">pause</span>
+  </button>
+  <button class="player-button">
+    <span class="material-icons">skip_next</span>
+  </button>
+  <button class="player-button">
+    <span class="material-icons">autorenew</span>
+  </button>
+  <div class="extra-icons">
+    <button class="player-button">
+      <span class="material-icons">menu</span>
+    </button>
+    <button class="player-button">
+      <span class="material-icons" style="color: green;">headphones</span>
+    </button>
+    <button class="player-button">
+      <span class="material-icons">remove</span>
+    </button>
+  </div>
+</div>
+
+  
+</body>
